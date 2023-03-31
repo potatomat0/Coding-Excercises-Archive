@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background:pink;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            height: 400px;
+            width: 400px;
+            align-items: center;
+            align-content: flex-end;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            background: cyan;
+            margin: 10px;
+            font-size: 40px;
+            color: green;
+            text-align: center;
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="order: 1;">1</div>
+        <div style="flex-shrink:3;">2</div>
+        <div style="flex-basis: 200px;">3</div>
+        <div style="align-self: baseline;">4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

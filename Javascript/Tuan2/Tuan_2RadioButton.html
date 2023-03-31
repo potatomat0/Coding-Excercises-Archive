@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="test">
+        <p>Hãy chọn chữ cái bạn thích =))</p>
+        <label><input type="radio" name="testChu" value="A"> A</label>
+        <label><input type="radio" name="testChu" value="B"> B</label>
+        <label><input type="radio" name="testChu" value="C"> C</label>
+        <p>Hãy chọn chữ số bạn thích =))</p>
+        <label><input type="radio" name="testSo" value="1"> 1</label>
+        <label><input type="radio" name="testSo" value="2"> 2</label>
+        <label><input type="radio" name="testSo" value="3"> 3</label>
+        <p>Hãy chọn con vật bạn thích =))</p>
+        <label><input type="radio" name="testConVat" value="Sư tử"> Sư tử</label>
+        <label><input type="radio" name="testConVat" value="Gà"> Gà</label>
+        <label><input type="radio" name="testConVat" value="Kỳ Lân"> Kỳ Lân</label>
+        <input type="submit" value="Submit" onclick="hienthi();">
+
+    </form>
+
+    <script>
+        var form1 = document.getElementById("test"); //tạo biến tên form dùng phương thức getElementByID để lấy tag form có id test
+        function hienthi() {
+            document.write("Chữ cái yêu thích của bạn là:" +form1.elements["testChu"].value + "<br />"); //in ra giá trị của radio button có tên testChu được chọn
+            document.write("Chữ số yêu thích của bạn là:" +form1.elements["testSo"].value + "<br />");
+            document.write("Chữ số yêu thích của bạn là:" +form1.elements["testConVat"].value + "<br />");
+        }
+    </script>
+</body>
+</html>

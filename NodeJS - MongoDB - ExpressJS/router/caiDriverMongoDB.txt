@@ -1,0 +1,13 @@
+b1: tạo folder trống
+b2: mở terminal trong folder
+b3: gõ :npm init -y
+b4: gõ: npm install mongodb
+b5: gõ code . trên terminal để mở vscode vào đúng folder đó
+
+
+---tạo file cấu hình package.json
+npm init -y
+đổi dòng start:
+"start": "node . "
+"main": "file_name",
+

@@ -1,0 +1,31 @@
+db.help :trợ giúp
+
+show.dbs : show all databases
+
+use DATABASE_NAME : create and use new database
+
+db : to know your current database that you're working on
+
+db.createCollection(name) : create a new collection
+
+Show collections : show all collections
+
+db.COLLECTION_NAME.drop() : drop collection
+
+>db.COLLECTION_NAME.insert(document): insert to a collection
+
+>db.COLLECTION_NAME.find(): show document inside a collection
+
+>db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA): update the document inside a collection
+
+>db.COLLECTION_NAME.save({_id:ObjectId(),NEW_DATA}): save document inside a collection 
+
+>db.COLLECTION_NAME.remove(DELLETION_CRITTERIA): remove document in a selected collection 
+
+
+
+show collections : hiển thị các collection
+create collections: tạo collections
+
+trong mongodb phải nhảy vào database để xóa
+db.dropDatabase()

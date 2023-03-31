@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 2.1</title>
+</head>
+
+<body>
+    <h1>Thao tác mảng số</h1>
+
+    <input type="text" name="nhap" id="nhap" placeholder="enter number">
+
+    <button onclick="enter()">enter</button> <br> <br>
+
+    <textarea name="xem" id="xem" cols="30" rows="10"></textarea> <br> <br>
+
+    <button onclick="lietkechan()">Liệt kê phần tử chẳn </button> <br> <br>
+
+    <button onclick="lietkenguyento()">Liệt kê phần tử nguyên tố</button> <br> <br>
+
+    <button onclick="timnhonhat()">Phần tử nhỏ nhất</button> <br> <br>
+
+    <button onclick="lkhoanthien()">Liệt kê số hoàn thiện</button>
+
+</body>
+
+<script>
+    //lấy dữ liệu
+    var b = document.getElementById('xem').value;
+
+    //tạo mảng
+    var mang = [];
+
+
+    //hàm nhập
+    function enter() {
+        var a = document.getElementById('nhap').value;
+        document.getElementById('xem').value += a + " ";
+        mang.push(a);
+        document.getElementById('nhap').value = "";
+    }//end nhập
+
+    //hàm liệu kê số chẳn
+    function lietkechan() {
+        document.getElementById('xem').value += "\ncác phần tử chẳn là: "
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] % 2 == 0) {
+                document.getElementById('xem').value += mang[i] + " ";
+            }
+        }
+    }//end liệt kê chẳn
+
+    //hàm liệt kê số nguyên tố
+    function lietkenguyento() {
+        document.getElementById('xem').value += "\ncác số nguyên tố là: "
+        for (let i = 0; i < mang.length; i++) {
+            var flag = true;
+            if (mang[i] < 2) {
+                flag = false;
+            }
+            else if (mang[i] == 2) {
+                flag = true;
+            }
+            else if (mang[i] % 2 == 0) {
+                flag = false;
+            }
+            else if (mang[i] % i == 0) {
+                flag = false;
+            }
+            if (flag == true) {
+                document.getElementById('xem').value += mang[i] + " ";
+            }
+        }
+    }//end liệt kê nguyên tố
+
+    //hàm tìm số nhỏ nhất
+    function timnhonhat() {
+        document.getElementById('xem').value += "\nphần tử nhỏ nhất là: "
+        var min = mang[0];
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] < i) {
+                parseInt(min) = mang[i];
+            }
+        }
+        document.getElementById('xem').value += min;
+    }//end hàm tìm số nhỏ nhất
+
+    //hàm liệt kê hoàn thiện
+    function lkhoanthien() {
+        document.getElementById('xem').value += "\ncác số hoàn thiện là: "
+        var sum = 0;
+        for (let t = 1; t <= mang.length; t++) {
+            for (let i = 1; i <= mang[t] / 2; i++) {
+                if (mang[i] % i == 0)
+                    sum += i;   
+            }
+            if (mang[t] == sum) {
+                document.getElementById('xem').value = mang[t];
+            }
+        }
+    }//end hàm liệt kê hoàn thiện
+</script>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body leftmargin="0" topmargin="0">
+    <script src="bai6.js"></script>
+    <script>
+        //in phòng tổ chức
+        document.write(
+                `<table cellspacing="1" cellpadding="3" border="1" >
+                    <caption>Phòng tổ chức</caption>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            ${congty[0].tochuc.map(sv=> {
+                return `<tr>
+                    <td>${sv.ten}</td>
+                    <td>${sv.tuoi}</td>
+                    <td>${sv.lop}</td>
+                </tr>`}).join('')}
+            </table>`)
+        //in phòng kế toán
+        document.write(
+            `<table cellspacing="1" cellpadding="3" border="1" >
+                <caption>Phòng kế toán</caption>
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        ${congty[1].ketoan.map(sv=> {
+            return `<tr>
+                <td>${sv.ten}</td>
+                <td>${sv.tuoi}</td>
+                <td>${sv.lop}</td>
+            </tr>`}).join('')}
+        </table>`)
+        
+        //in phòng hành chính
+        document.write(
+                `<table cellspacing="1" cellpadding="3" border="1" >
+                    <caption>Phòng hành chính</caption>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            ${congty[2].hanhchinh.map(sv=> {
+                return `<tr>
+                    <td>${sv.ten}</td>
+                    <td>${sv.tuoi}</td>
+                    <td>${sv.lop}</td>
+                </tr>`}).join('')}
+            </table>`)
+    </script>
+</body>
+</html>

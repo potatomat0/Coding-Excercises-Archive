@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+       // Viết ctrinh cắt bớt 1 chuỗi có độ dài được chỉ định.
+//  Nếu chiều dài chuỗi lớn hơn giá tri chỉ định thì lấy độ dài đc chỉ định - 3,
+//  ngược lại vẫn lấy độ dài được chỉ định.
+// Vd: khi gọi hàm ('boomerang', 7) =>kq: boom...
+
+let vidu = 'hom nay di hoc javascript kho qua!'
+
+var catChuoi = (char, num) => { 
+    if (num < char.length) 
+        num = num-3
+    chuoiMoi = char.substring(0, num)
+    return chuoiMoi
+}
+
+    document.write(catChuoi(vidu ))
+    </script>
+</body>
+</html>

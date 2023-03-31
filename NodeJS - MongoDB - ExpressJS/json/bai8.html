@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body leftmargin="0" topmargin="0">
+    <script src="bai8.js"></script>
+    <script>
+
+        for(phongban of contacts){ //khởi động vòng lặp
+            document.write(
+                `<table cellspacing="1" cellpadding="3" border="1" >
+                    <caption>Phòng ${Object.keys(phongban)}</caption> 
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            ${phongban[Object.keys(phongban)].map(sv=> {
+                return `<tr>
+                    <td>${sv.ten}</td>
+                    <td>${sv.tuoi}</td>
+                    <td>${sv.lop}</td>
+                </tr>`}).join('')}
+            </table>`)
+        }
+
+    </script>
+</body>
+</html>

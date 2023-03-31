@@ -1,0 +1,21 @@
+</div>
+</div>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="/public/stylesheets/styles.css"></script>
+</body>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    // tạo chức năng highlight khi navbar được active
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+<!-- sweet alert npm -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

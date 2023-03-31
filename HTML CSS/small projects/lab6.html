@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking</title>
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+      a {
+        text-decoration: none;
+      }
+      /* add font và gán tên font */
+      @font-face {
+        font-family: thislookscool;
+        src: url(../font/FiraSans-ExtraBold.otf);
+      }
+      /* chỉnh responsive */
+      nav{
+        background:white; 
+         background-size: 100% 500px;
+         border: 0px;
+      }
+      @media screen and (max-width:570px) 
+      {
+       nav {background-image: none; 
+        background-color: burlywood;}
+      }
+      /* chỉnh spacing giữa các nav-item */
+      .nav-item{
+            margin-right: 20px;
+            margin-left:10px;
+            border-radius: 7px;
+        }
+      /*tô màu background khi hover */
+        .nav-item:hover {
+        background: orangered;
+      }
+      .btn:hover{
+        background: orangered;
+      }
+      .btn{
+        border: 0px;
+      }
+      /* bo góc navbar */
+      .navbar {
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+
+      /* chỉnh carousel   */
+      .carousel-item img {
+        filter:brightness(75%);
+        filter: blur(75);
+      }
+      .carousel-caption{
+        
+        top: 200px;
+      }
+      .customizedbutton:active {
+        background-color:orangered;
+      }
+      /* chỉnh body */
+      .body2 img {
+        filter:brightness(50%);
+      }
+     .navbar .nav-item:hover{
+       background-color:orangered;
+     }
+     .gallery .card{
+       border: solid 3px orangered;
+     }
+     /* tjao hiệu ứng phóng to khi hover */
+     .gallery .card:hover,.special .card:hover{
+        transform: scale(1.1);
+     }
+     .gallery .card,.special .card {
+       transition: all 0.5s;
+     }
+     .card{
+      overflow: hidden;
+     }
+     
+     /*---------------- tạo animation cho máy bay ------------------------*/
+     .maybay{
+      position: fixed;
+       right: 5%;
+       bottom: 5%;
+     }
+     .maybay:hover{
+      animation: xoay 1s infinite;
+     }
+    @keyframes xoay {
+      to{transform: rotateY(360deg)}
+    }
+    </style>
+</head>
+<body style="background:beige;">
+    <!--container-->
+    <div class="container-fluid">
+        <!--header-->
+        <header>
+          <!--navbar-->
+          <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-sm-black">
+            <div class="container-fluid ps-4 pe-4">
+              <a class="navbar-brand" href="#"><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/logo.png" alt="" width="70%"></a>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav me-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link active" href="#">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown m-0">
+                      <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"> About
+                      </button>
+                      <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Chăm sóc khách hàng</a>
+                      <a class="dropdown-item" href="#">Tuyển dụng</a>
+
+                      <a class="dropdown-item border-top border-2 border-muted mt-3" href="#">Facebook</a>
+                      <a class="dropdown-item" href="#">Instagram</a>
+                      <a class="dropdown-item" href="#">Twitter</a>
+                      </div>
+                  </div> <!--dropdown menu-->
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown m-0">
+                      <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"> Blog
+                      </button>
+                      <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Our stories</a>
+                      <a class="dropdown-item" href="#">Our updates</a>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active">Liên hệ</a>
+                  </li>
+                </ul>
+              </div> 
+            </div>
+          </nav> <!--end navbar-->
+
+          <!--carousel-->
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators customizedindicator">
+              <button type="button" style=" width:5px; height:30px;margin:10px;background: transparent; border: solid 2px white; border-radius: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active customizedbutton" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" style=" width:5px; height:30px;margin:10px;background: transparent; border: solid 2px white; border-radius: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" style=" width:5px; height:30px;margin:10px;background: transparent; border: solid 2px white; border-radius: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" style="height:500px">
+              <div class="carousel-item active">
+                <img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/slider-01.jpg" class="d-block w-100" alt="...">
+                <!--carousel text-->
+                <div class="carousel-caption d-none d-md-block text-start justify-content-start pe-5" style="top:10%; width: 40%;">
+                  <h5 class="text-light display-6" style="font-family: thislookscool;">Welcome to Michellin Star Restaurant</h5>
+                  <p class="text-light">I really dont know what the heck I'm doing now, gotta go home after class and take some nap, finish my homework then restart the day, fck</p>
+                  <div class="btn btn-danger">Reservation</div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/slider-02.jpg" class="d-block w-100" alt="...">
+                <!--carousel text-->
+                <div class="carousel-caption d-none d-md-block text-start justify-content-start pe-5" style="top:10%; width: 40%;">
+                  <h5 class="text-light display-6" style="font-family: thislookscool;">Welcome to Michellin Star Restaurant</h5>
+                  <p class="text-light">I really dont know what the heck I'm doing now, gotta go home after class and take some nap, finish my homework then restart the day, fck</p>
+                  <div class="btn btn-danger">Reservation</div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/slider-03.jpg" class="d-block w-100" alt="...">
+                <!--carousel text-->
+                <div class="carousel-caption d-none d-md-block text-start justify-content-start pe-5" style="top:10%; width: 40%;">
+                  <h5 class="text-light display-6" style="font-family: thislookscool;">Welcome to Michellin Star Restaurant</h5>
+                  <p class="text-light">I really dont know what the heck I'm doing now, gotta go home after class and take some nap, finish my homework then restart the day, fck</p>
+                  <div class="btn btn-danger">Reservation</div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="fa fa-arrow-alt-circle-left fa-2x" style=" color: orangered" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button"  style=" color: orangered" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="fa fa-arrow-alt-circle-right fa-2x" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> <!--end carousel-->
+        </header> <!--end header-->
+
+        <!--body-->
+        <!--welcome to dinner restaurant-->
+          <div class="row" style="background: url(../resources/tainguyenlabs/hinhanh_labs/imagelab6/about-bg.jpg) no-repeat; background-size: 100%; height:500px; background-position-y: -200px;">
+          <!--cột trái-->
+          <div class="col-6 justify-content-end " style="padding: 5% 0% 0% 15%;">
+            <h2 style="font-family: thislookscool; text-align: right;">Welcome to <span style="color: orangered;">Live Dinner Restaurant</span></h2>
+            <p style="text-align: justify;">I'm still in class, about to go home though. gotta write some random shit here to make the website look stylisticly pleasant
+              This album is so beautiful it hurts. Euphoric but melancholic at the same time.
+               I dont know i thought i cant feel anything but by listening to this album… 
+              it hits something within me. Im no longer afraid of the void inside of me.
+               Im fully embrace all of my dark parts. Im human after all. Thank you🖤
+              Have a beautiful day to whoever who reads this, beautiful soul.
+               I wish we could meet up someday and tell our scars and the way we became who we are right now
+            </p>
+            <div class="btn btn-danger mb-3">Reservation</div>
+          </div> <!--end cột trái-->
+          <!--cột phải-->
+          <div class="col-6 p-5">
+             <div>
+              <img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/about-img.jpg" class="w-75 h-75" style="box-shadow: 15px 15px 0 orangered ;" alt="">
+             </div>
+          </div> <!--end cột phải-->
+        </div> <!--end welcome to dinner restaurant-->
+        <!--quote-->
+        <div style="background: url(../resources/tainguyenlabs/hinhanh_labs/imagelab6/qt-bg.jpg) no-repeat; height:auto; background-size: 100%; background-position-y: -150px;" class="p-5 row">
+          <div class="text-center  d-inline-block align-middle" style="font-family: 'Courier New', Courier, monospace; color: orangered;">
+            <div class="w-25 mx-auto" style="top: 50px;">
+              <p>"Please shut the fuck up for once i've had enough of your shitty opinions"</p>
+              <h3 style="font-family: fantasy;">-Some dude</h3>
+            </div>
+        </div> 
+        </div><!--end quote-->
+
+        <!--special menu-->
+        <div class="row special">
+          <h4 class="text-dark text-center fw-bold">Special menu</h4>
+          <p class="text-center">Just some dummy text for decoration idk</p>
+          <!--cột trái-->
+          <div class="col-3">
+            <ul class="navbar-nav">
+              <li class="nav-item ps-3 mb-3">
+                <a class="nav-link text-dark" href="#">All</a>
+              </li>
+              <li class="nav-item ps-3 mb-3">
+                <a class="nav-link text-dark" href="#">Drinks</a>
+              </li>
+              <li class="nav-item ps-3 mb-3">
+                <a class="nav-link text-dark" href="#">Lunch</a>
+              </li>
+              <li class="nav-item ps-3 mb-3">
+                <a class="nav-link text-dark" href="#">Dinner</a>
+              </li>
+            </ul>
+          </div> <!--end col-->
+
+          <!--cột phải-->
+          <div class="col-9">
+            <div class="row row-cols-2 row-cols-md-3 g-4">
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-01.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 1-->
+
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-02.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 2-->
+
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-03.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 3-->
+
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-04.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 4-->
+
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-05.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 5-->
+
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-06.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 6-->
+
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-07.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 7-->
+
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-08.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 8-->
+
+              <div class="col">
+                <div class=" card shadow">
+                  <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/img-09.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+                </div>
+              </div> <!--end col 9-->
+               
+            </div>
+          </div> <!--end cột phải-->
+        </div> <!--end special menu-->
+    
+        <!--gallery-->
+        <div class="p-4 gallery">
+          <h4 class="text-dark text-center fw-bold">Gallery</h4>
+          <p class="text-center">Just some dummy text for decoration idk this is the second one also</p>
+          <div class="row row-cols-3 row-cols-md-3 g-4">
+            <div class="col">
+              <div class=" card shadow">
+                <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/gallery-img-01.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+              </div>
+            </div> <!--end col 1-->
+
+            <div class="col">
+              <div class=" card shadow">
+                <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/gallery-img-02.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+              </div>
+            </div> <!--end col 2-->
+
+            <div class="col">
+              <div class=" card shadow">
+                <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/gallery-img-03.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+              </div>
+            </div> <!--end col 3-->
+
+            <div class="col">
+              <div class=" card shadow">
+                <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/gallery-img-04.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+              </div>
+            </div> <!--end col 4-->
+
+            <div class="col">
+              <div class=" card shadow">
+                <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/gallery-img-05.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+              </div>
+            </div> <!--end col 5-->
+
+            <div class="col">
+              <div class=" card shadow">
+                <a href=""><img src="../resources/tainguyenlabs/hinhanh_labs/imagelab6/gallery-img-06.jpg" class="card-img-top" width="25%" height="25%" alt="..."></a>
+              </div>
+            </div> <!--end col 6-->
+          </div> <!--end grid-->
+        </div> <!--end gallery-->
+
+        <!--Contact-->
+        <div class="row px-5 py-2" style="background:orangered; border-radius: 30px;">
+                    <div class="col-4">
+                      <i class="fa-solid fa-phone fa-2x p-3 float-start bg-light me-2" style="color: orangered;"></i>
+                      <i class="fa-solid fa-angles-right fa-2x p-3 float-end " style="color: white;"></i>
+                      <h5 class="text-light">Phone</h5>
+                      <p class="text-light">0338214140</p>
+                    </div>
+        
+                    <div class="col-4">
+                      <i class="fa-solid fa-envelope fa-2x p-3 float-start bg-light me-2 " style="color: orangered;"></i>
+                      <i class="fa-solid fa-angles-right fa-2x p-3 float-end " style="color: white;"></i>
+                      <h5 class="text-light">Email</h5>
+                      <p class="text-light">Sirnhat0@gmail.com</p>
+                    </div>
+        
+                    <div class="col-4">
+                      <i class="fa-solid fa-location-dot fa-2x p-3 float-start bg-light me-2" style="color: orangered;"></i>
+                      <h5 class="text-light">Location</h5>
+                      <p class="text-light">11 Hoàng Văn Thụ P15 PNh</p>
+                    </div>
+         </div> <!--end contact-->
+        <!--footer-->
+        <footer class="row text-light">
+          <!--info columns-->
+          <div class="row container" style="background-image: linear-gradient(rgba(63, 60, 60, 0.374),rgba(63, 60, 60, 0.374)), url(../resources/tainguyenlabs/hinhanh_labs/imagelab6/footer-bg.jpg); background-size: cover; background-position-y: -100px;">
+            
+            <div class="col-lg-5 mt-2 text-sm-center text-lg-start  text-md-center pe-5">
+              <p class="fw-bold">ABOUT US</p>
+              <hr class="text-light w-100 text-start mb-1 pe-4">
+              <p>it's almost 1am and should be taking some sleep, godamnit i should've done this earlier. It's 3:20 pm the next day and i'm so exhausted out of all this pointless classes. better get some sleep, or maybe i should just jog my way home first</p>
+            </div>
+            <!-- col 2-->
+            <div class="col-lg-2 mt-2 text-sm-center text-lg-start p-0 text-md-center">
+              <p class="fw-bold">SUBSCRIBE</p>
+              <hr class="text-light w-75 mb-0 pe-4 text-center">
+              <input type="form" placeholder="Email address" class="form-control mt-2 mb-0 w-75">
+              <div class="btn mt-0 w-75 mb-3" style="background: orangered">SUBSCRIBE</div>
+              <br>
+              <!--ICONS-->
+              <div class="justify-content-between">
+                <div class="d-inline-block"><a href=""><i class="ms-1 fa-brands fa-facebook fa-2x p-1 rounded-3" style="background: white; color: orangered;"></i></a></div>
+              <div class="d-inline-block"><a href=""><i class="fa-brands fa-twitter fa-2x p-1 rounded-3" style="background: white; color: orangered;"></i></a></div>
+              <div class="d-inline-block"><a href=""><i class="fa-brands fa-google fa-2x p-1 rounded-3" style="background: white; color: orangered;"></i></a></div>
+              <div class="d-inline-block"><a href=""><i class="fa-brands fa-instagram fa-2x p-1 rounded-3 me-4" style="background: white; color: orangered;"></i></a></div>
+              </div>
+              
+              
+            </div> <!--end column 2-->
+            
+            <!--column 3-->
+            <div class="col-lg-2 mt-2 text-sm-center text-lg-start text-md-center  p-0">
+              <p class="fw-bold">CONTACT INFORMATION</p>
+              <hr class="text-right w-75 mb-0 pe-4">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-light ps-2" href="#">11 Hoàng Văn Thụ P15 Phú Nhuận</a></li>
+                
+                <li class="nav-item"><a class="nav-link text-light ps-2" href="#">+84 338214140</a></li>
+                
+                <li class="nav-item"><a class="nav-link text-light ps-2" href="#">sirnhat0@gmail.com</a></li>
+              </ul>
+               <!--end link list-->
+            </div> <!--end column 3-->
+
+            <!--column 4-->
+            <div  class="col-lg-3 mt-2 text-sm-center text-lg-start text-md-center  p-0">
+              <p class="fw-bold">CONTACT</p>
+              <hr class="text-light w-75 mb-0 pe-4">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-light ps-2" href="#">Mon: 9am-9pm</a></li>
+                
+                <li class="nav-item"><a class="nav-link text-light ps-2" href="#">Tues-Fri: 7am-7pm</a></li>
+                
+                <li class="nav-item"><a class="nav-link text-light ps-2" href="#">Sat: 8am-8pm</a></li>
+
+                <li class="nav-item"><a class="nav-link text-light ps-2" href="#">Sun: 6am-9pm</a></li>
+              </ul>
+            </div> <!--end link list-->
+
+            </div> <!--end column 4-->
+          </div> <!--end info columns-->
+          <!-- Copyright -->
+          <div class="text-center p-4 text-light" style="background-color: rgb(0, 0, 0);">
+            © 2021 Copyright all right reserved:
+            <a class=" fw-bold text-light" href="https://getbootstrap.com/">Hoang Minh Nhat</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!--end footer-->
+      </div> <!--end container-->
+
+
+      <!--máy badger hình máy bay giấy luôn nằm ở phía góc màn hình-->
+      <a href="" class="maybay"><i class="fa-solid fa-paper-plane fa-2x rounded-3 p-2" style="background: orangered; color: white;"></i></a>
+      <div class="btn btn-danger"></div>
+</body>
+</html>

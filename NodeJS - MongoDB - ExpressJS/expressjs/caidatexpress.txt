@@ -1,0 +1,28 @@
+Cài đặt express thủ công:
+
+1.tạo một folder rỗng
+2.vào cmd của folder đó
+3.tạo package.json: npm init -y
+4.Cài dependency: npm install express ==> sau khi cài xong sẽ có folder tên node_modules
+
+
+
+---
+để tạo khung sườn ứng dụng cho project, mở terminal và gõ:  npx express-generator
+-h để hiển thị các options
+
+
+
+---
+để mở vscode của một folder: vào folder đó, mở terminal, gõ: code . 
+
+trong file package.json có một mục dependency, nó lưu lại các modules đã cài
+nếu copy source code từ github hoặc máy a sang b thì phải xóa node_modules và package-lock.json trong folder
+vậy nên khi máy b muốn cài lại những modules đã tải tử máy vừa copy về, phải vào terminal của folder,...
+...gõ npm i. máy sẽ tự vào package.json, tìm vào dependency và tải những modules đã sử dụng  
+
+---
+trong express không cần phải viết hàm đọc file 
+hay cấu trúc rẽ nhánh vào những trường hợp không nhập đúng url
+
+

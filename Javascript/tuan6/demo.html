@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Đề: tạo class getter setter, thông báo trên console là tên chưa đủ độ dài khi <4 ký tự
+class vidu{
+    constructor(ten) {
+        this.ten = ten;
+    }
+    set Setten(a) {
+        if(a.length <= 3) {
+            console.log('ten chua du do dai')
+            return;
+        }
+        this.ten = a;
+    }
+    get Getten() { return this.ten;}
+}
+
+var sinhvien = new vidu("he")
+console.log(sinhvien.ten)
+
+    </script>
+</body>
+</html>

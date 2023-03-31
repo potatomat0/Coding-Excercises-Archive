@@ -1,0 +1,10 @@
+123	2003-11-15	19	Nam	PHP Java	./images/hong_16.jpg
+123	2022-11-17	0	Nữ	Bạn không chọn sở thích	./images/cuoi_2.jpg
+1231	2022-11-15	0	Nam	Bạn không chọn sở thích	./images/cuoi_7.jpg
+123	2006-01-17	16	Nữ	Bạn không chọn sở thích	./images/cuoi_3.jpg
+123	2004-11-15	18	Nam	PHP	./images/cuoi_8.jpg
+123	2004-11-02	18	Nam	Django PHP Java	./images/cuoi_3.jpg
+123	2004-11-02	18	Nữ	Bạn không chọn sở thích	./images/cuoi_7.jpg
+123	2004-11-02	18	Nữ	Bạn không chọn sở thích	./images/cuoi_1.jpg
+123	2004-11-07	18	Nữ	Java NodeJS	./images/cuoi_2.jpg
+1	2004-11-07	18	Nữ	PHP Java	./images/cuoi_7.jpg

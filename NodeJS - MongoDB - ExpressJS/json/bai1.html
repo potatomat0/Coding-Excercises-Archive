@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body leftmargin="0" topmargin="0"> <!--chỉnh margin của nội dung bên trong cho sát với viền (topmargin=0)-->
+    <script src="bai1.js"></script>
+    <script>
+        document.write("<table border='1'><tr> <th>Họ tên</th> <th>Mã sinh viên</th> <th>Môn 1</th> <th>Học bổng</th>  </tr> <tr>")
+        document.write("<td>"+sinhvien.tensv+"</td>")
+        document.write("<td>"+sinhvien.masv+"</td>")
+        document.write("<td>"+sinhvien.monhoc[0]+"</td>")
+        document.write("<td>"+sinhvien.DatHocBong+"</td></tr></table>")
+        
+    </script>
+
+    <!--gõ table bằng emmet: table>tr*2>td*2-->
+    <script>
+        document.write("<p>"+"đây là cách sử dụng emmet tạo table và đưa nội dung vào một lệnh document.write:"+"</p>")
+        document.write(`
+            <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Môn học</th>
+        </tr>
+        <tr>
+            <td>${sinhvien.tensv}</td>
+            <td>${sinhvien.Tuoi}</td>
+            <td>${sinhvien.monhoc[0]}</td>
+        </tr>
+    </table>
+        `)
+    </script>
+
+
+</body>
+</html>

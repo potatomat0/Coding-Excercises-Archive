@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dhoa"><p>Hoa hong</p><p>Hoa lan</p>
+
+        <script type="text/javascript">
+            var pHoa = document.getElementById("dhoa");
+            document.write("Ten node:" + pHoa.nodeName + "</br>");
+            document.write("gia tri cua node:" + pHoa.nodeValue + "</br>");
+            document.write("node cha: " + pHoa.parentNode.nodeName + "</br>");
+            document.write("node con dau tien:" +pHoa.firstChild.innerText + "</br>");
+            document.write("node con thu hai:" + pHoa.childNodes[1].childNodes[0].nodeValue + "</br>");
+            pHoa.childNodes[1].innerText="Hoa phuong vi"
+        </script>
+    </div>
+</body>
+</html>

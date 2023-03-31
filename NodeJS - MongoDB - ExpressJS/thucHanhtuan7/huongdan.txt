@@ -1,0 +1,131 @@
+Anyhow, tuần sau (tuần 8) kiểm tra express mongodb
+
+Tạo website bằng nodejs, mongodb và expressjs theo mô hình mvc (model - view - controller)
+
+Bước 1: tạo bộ khung website với express bằng lệnh express -e
+        nếu không chạy được thì chạy lệnh này trước: npm i -g express-generator
+Bước 2: Cài đặt các module trong file package.json do express tạo ra bằng npm i 
+Bước 3: cài module mongoose để tạo schema dùng cho việc kết nối mongodb
+Bước 4: Tạo schema để kết nối giữa mongodb và nodejs 
+        tạo một folder tên models:
+        trong /models tạo một file tên nhanvien.js
+        
+        var db = require("mongoose)
+
+        db.connect("mongodb:127.0.0.1:27017/csdlnv)
+
+        var nhanvienSchema = db.Schema({name: String, age: Number})
+
+        var Nhanvien = db.model('Nhanvien', nhanvienSchema)
+        module.exports = Nhanvien
+Bật server môngdb để có thể thực hiện kết nối từ web vào:
+    mongodb//127.0.0.1:27017
+
+Bước 5: vào thư mục views (*.ejs) để tạo giao diện (form) và routes/index (*.js)
+
+    để sử dụng được nhanvien.js, mở routes/index/index, gõ:
+
+    var Nhanvien = require('../models/nhanvien.js');
+
+Quay lại
+
+    views/themnv.ejs :
+
+        <form action="/them" method="post">
+            Tên nv mới: <input type="text" name="txtTen"> <br>
+            Tuổi nv mới <input type="text" name="txtTuoi" <br>
+            <button type="submit">Thêm</button>
+        </form>
+
+         routes sẽ là: (lưu ý, không xóa bất cứ dòng code gì trong file, chỉ thêm code vào)
+
+        router.get('/them', function(req, res, next) {
+            res.render('themnv.ejs');
+        });
+
+        router.post('/them', function(req, res, next) {
+            var nv = new Nhanvien({
+                name: req.body.txtTen,
+                age: req.body.txtTuoi
+            })
+            nv.save(error => res.redirect('/'))
+        });
+----------------------------------------------------------------
+    views/suanv.ejs:
+        
+        <form action="/sua" method="post">
+            Tên nv đã có: <input type="text" name="txtTen"> <br>
+            Nhập tuổi mới cho nhân viên: <input type="text" name="txtTuoi" <br>
+            <button type="submit">Sửa</button>
+        </form>
+
+        và routes/index sẽ là:
+
+            router.get('/sua', function(req, res, next) {
+                res.render('suanv.ejs');
+            });
+
+            router.post('/sua', function(req, res, next) {
+                Nhanvien.findOne({name: req.body.txtTen},
+                    (error,nv) => {
+                        nv.age = req.body.txtTuoi
+                        nv.save(error => res.redirect('/'))
+                })
+            });
+----------------------------------------------------------------
+    views/xoanv.ejs
+        <form method="post" action="/xoa" >
+            Tên nv cần xóa <input type="text" name="txtTen"> <br>
+            <button type="submit">Xóa</button>
+        </form>
+
+        routes/index sẽ là: 
+
+            router.get('/xoa', function(req, res, next) {
+                    res.render('xoanv.ejs');
+                });
+
+                router.post('/xoa', function(req, res, next) {
+                    Nhanvien.deleteOne(
+                        {name: req.body.txtTen},
+                        error => res.redirect('/xoa')
+                    )
+                });
+----------------------------------------------------------------
+    views/xemdsnv.ejs
+
+    <table border="1">
+        <tr> <th> Tên nv </th> <th> Tuổi </th> </tr>
+            <% dsnv.forEach(nv=> { %>
+                <tr>
+                    <td> <%= nv.name %> </td>
+                    <td> <%= nv.tuoi %> </td> 
+            <% }); %> 
+    </table>
+    <a href="/"> Quay về trang chủ </a>
+
+        routes/index: 
+            router.get('/xem', function(req, res, next) {
+                    Nhanvien.find({},(error, dsnv) => {
+                        res.render('xemdsnv.ejs', {dsnv});
+                     })
+                    });
+--------------------------------------------------------------------------------
+    views/trangchu.ejs:
+    <a href="/xem"> Xem danh sách nhân viên </a> <br>
+    <a href="/them"> Thêm nhân viên mới </a> <br>
+    <a href="/sua"> Sửa thông tin nhân viên đã có </a> <br>
+    <a href="/xoa"> Xóa nhân viên đã có </a> <br>
+            
+    routes/index: 
+        router.get('/', function(req, res, next) {
+                        res.render('trangchu.ejs')
+                    });
+
+
+---------------------------------
+kích hoạt package.json trên npm scripts
+sau đó, gõ localhost:3000 trên trình duyệt để vào trang chủ
+localhost/them để vào trang them
+tương tự cho những trang khác
+

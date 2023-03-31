@@ -1,0 +1,93 @@
+<!DOCTYPE html>  
+<html lang = "en">  
+<head>  
+<title> Bai5 lab1 </title>  
+ <!-- CSS only -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ <!-- JavaScript Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+  
+<style>  
+
+input {
+    margin: 10px;
+    height: 50px; 
+    width: 100px;
+    background: powderblue;
+    box-shadow: 3px 3px 2px grey;
+    border: 0px;
+    padding: 26px;  
+    font-size: 20px; 
+}
+#hienthi,#mhphu {
+    height: 50px;
+    width: 80%;
+    display: block;
+    margin: 0px auto 0px auto;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    margin: auto;
+}
+.khungform {
+    width: 60%;
+    height: 550px;
+    text-align: center;
+    margin: 0px auto;
+    border: 5px solid orangered;
+    padding: 10px;
+    background-image: linear-gradient(to right, teal, powderblue );
+}
+
+
+body {
+    background-image: linear-gradient(to right, powderblue, teal);
+}
+
+</style>  
+  
+</head>  
+<body>  
+<h1> Lab1 - Bài 5 </h1> 
+    <div class= "khungform">  
+        <form name = "maytinh">  
+            
+        <!--nút input hiển thị các số được nhập -->  
+        <input id = "hienthi" type ="text" name = "mhphu"> 
+        <input id = "hienthi" type ="text" name = "answer"> <br> <br>  
+        <!--hiển thị các nút máy tính-->  
+            <input type = "button" value = "1" onclick = "maytinh.answer.value += '1' " onclick = "maytinh.mhphu.value += '1' ">  
+            <input type = "button" value = "2" onclick = "maytinh.answer.value += '2' " onclick = "maytinh.answer.value += '2' ">  
+            <input type = "button" value = "3" onclick = "maytinh.answer.value += '3' ">  
+            <input type = "button" value = "+" onclick = "maytinh.answer.value += '+' ">  
+            <br> <br>  
+                
+            <input type = "button" value = "4" onclick = "maytinh.answer.value += '4' ">  
+            <input type = "button" value = "5" onclick = "maytinh.answer.value += '5' ">  
+            <input type = "button" value = "6" onclick = "maytinh.answer.value += '6' ">  
+            <input type = "button" value = "-" onclick = "maytinh.answer.value += '-' ">  
+            <br> <br>  
+                
+            <input type = "button" value = "7" onclick = "maytinh.answer.value += '7' ">  
+            <input type = "button" value = "8" onclick = "maytinh.answer.value += '8' ">  
+            <input type = "button" value = "9" onclick = "maytinh.answer.value += '9' ">  
+            <input type = "button" value = "*" onclick = "maytinh.answer.value += '*' ">  
+            <br> <br>  
+                
+                
+            <input type = "button" value = "/" onclick = "maytinh.answer.value += '/' ">  
+            <input type = "button" value = "0" onclick = "maytinh.answer.value += '0' ">  
+            <input type = "button" value = "." onclick = "maytinh.answer.value += '.' ">  
+            <!--nút hiển thị kết quả-->
+            <input type = "button" value = "=" onclick = "maytinh.answer.value = eval(maytinh.answer.value) ">  
+            <br>   
+            <!-- nút xóa các số nhập vào -->  
+            <input type = "button" value = "Xóa" onclick = "maytinh.answer.value = ' ' " id= "clear" style="background: red; color: white">  
+            <br>   
+            
+        </form>  
+    </div>  
+</body>  
+</html>  

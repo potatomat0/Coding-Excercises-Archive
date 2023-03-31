@@ -1,0 +1,8 @@
+Bươc một: lên trang startbootstrap tải theme về
+		giải nén ra
+Bước hai: tạo một folder express, mở cmd
+				    gõ express -e và sau đó npm i
+Bước ba: đổi extension của các file html của folder theme tải từ bước 1 thành ejs 
+Bước bốn: vào /view/ trong folder express để copy paste các file theme vừa đổi extension từ bước 3 vào
+Bước năm: copy paste các folder trong /assets của theme folder tải từ bước 1 vào /public/ trong folder express
+Bước năm: kích hoạt package.json, lên browser gõ localhost:3000/[tên trang đã tạo trong routes/index.js]

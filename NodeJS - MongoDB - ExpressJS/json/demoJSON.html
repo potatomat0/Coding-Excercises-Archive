@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        masv{
+            color: red;
+        }
+        tensv{
+            color: powderblue;
+        }
+    </style>
+</head>
+<body>
+    <!--đây là cách viết bằng html-->
+    <!-- <sinhvien>
+        <masv>591210710</masv>
+        <br>
+        <tensv>Hoang Minh Nhat</tensv>
+    </sinhvien> -->
+
+    <!--đây là cách viết bằng kiểu json-->
+    <script>
+        var sinhvien = {
+            "masv": "501210710",
+            "tensv": "Nhat",
+            "MaSoXe": null,
+            "monhoc": ["Node.JS", "angularjs","CMS","PHP1"],
+            "DatHocBong": false,
+            "diachi": {"sonha": 11, "duong": "hoang van thu"},
+        }
+        // phía trong hàm, bên trong ngoặc kép nếu có ngoặc thì sẽ phải là ngoặc đơn
+        document.write("<span style='color:red;'>"+ sinhvien.masv+"</span>");
+        document.write(sinhvien.tensv);
+        
+    </script>
+</body>
+</html>

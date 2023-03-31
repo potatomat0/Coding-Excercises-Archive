@@ -1,0 +1,56 @@
+<% include header.ejs %>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <table border="0" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tên hàng hóa</th>
+                                <th scope="col">Giá hàng hóa</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% dshh.forEach(hh=> { %> 
+                            <tr>
+                                <td><%= hh.name %></td>
+                                <td><%= hh.price %></td>
+
+                                <!-- nút sửa -->
+                                <td>
+                                    <a href="/sua/<%= hh._id %>" type="button" class="btn btn-warning">Sửa</a>
+                                </td>
+                                <!-- nút xóa theo id -->
+                                <td>
+                                       <a onclick="areYouSure('<%= hh._id %>')" type="button" class="btn btn-danger">Xóa</a>
+                                </td>
+                            </tr>
+                            <%  }); %>
+                    </tbody>
+                    </table>
+                    <script>
+                        function areYouSure(id) {
+                            Swal.fire({
+                            title: 'Are you sure?',
+                            text: "You won't be able to revert this!",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Yes, delete it!'
+                            }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location = "/xoa/" + id
+                                Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                                )
+                            }
+                            })
+                        }
+                        setInterval(areYouSure(id), 3000)
+                    </script>
+                    <a href="/"> Quay về trang chủ </a>
+                </div>
+<% include footer.ejs %>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="bai5.js"> </script>
+    <script>
+        document.write(
+                `<table cellspacing="1" cellpadding="3" border="1" >
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            ${dulieu.danhsach.map(sv=> {
+                return `<tr>
+                    <td>${sv.tensv}</td>
+                    <td>${sv.tuoi}</td>
+                    <td>${sv.lop}</td>
+                </tr>`}).join('')}
+            </table>`)
+    </script>
+</body>
+</html>

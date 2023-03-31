@@ -1,0 +1,33 @@
+1.	Tạo mảng các đối tượng nhân viên gồm mã số nhân viên, lương. Tìm nhân viên có lương lớn hơn 5000000(1đ)
+2.	Sắp xếp ngày tháng năm tăng/ giảm(1đ)
+3.	Tạo class Vehicle có các lớp kế thừa Hike, SemiTruck. SV tạo thêm các thuộc tính và phương thức cho chúng. (1đ)
+4.	Sử dụng module viết hoa chữ cái đầu tiên và không ảnh hưởng đến phần còn lại của câu. (1đ)
+5.	Sử dụng module viết hoa chữ cái đầu tiên của mỗi từ trong câu.(1đ)
+6.	XÂY DỰNG MỘT CHƯƠNG TRÌNH QUẢN LÝ DANH SÁCH CÁC CD TỪNG MODULE
+Module 1: (3đ)
+Lớp CD Tổng Hợp 
+o  Tựa CD: chuỗi ký tự, 
+o Ca sỹ: chuỗi ký tự, 
+o Số bài hát: số nguyên (>0) 
+o Giá thành: số thực (>0) 
+
+- Viết hàm showInfo thông tin của CD tổng hợp
+Lớp CD Nhạc Trẻ có thêm thuộc tính số lượng, đơn giá.
+
+-Viết hàm tính Thành tiền Nếu số lượng trên 20 thì thành tiền (số lượng * đơn giá) được giảm 20%, ngược lại không giảm.
+
+*Lớp CD nhạc trịnh có thuộc tính năm xuất bản, số lượng, đơn giá, kế thừa từ lớp CD tổng hợp, 
+
+-Viết hàm tính thành tiền lớp CD nhạc trịnh bằng số lượng * đơn giá.
+
+-Viết hàm tính khuyến mãi, nếu năm xuất bản < 1990 khuyến mãi 10% ngược lại không khuyến mãi.
+
+Module 2 : Tạo một mảng (1đ)
+
+mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,17, 18, 19, 20];
+
+Viết hàm tính tổng các số chẵn trong mảng
+
+Module 3 : Xử lý (1đ)
+
+Nếu Thành Tiền của Lớp CD Nhạc Trẻ > Thành tiền của Lớp CD nhạc trịnh thì xuất ra thông báo « Thành tiền của Lớp CD Nhạc Trẻ lớn hơn » ngược lại « Thành Tiền của Lớp CD nhạc trịnh lớn hơn »

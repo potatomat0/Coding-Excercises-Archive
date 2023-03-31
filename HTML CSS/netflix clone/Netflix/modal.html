@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký tài khoản</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- form đăng ký -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <main class="main">
+            <form class="form" id="form">
+              <div class="form__item">
+                <label for="firstname">Tên</label>
+                <input type="text" class="input" name="firstname" placeholder="A">
+                <span class="rule firstname-rule">
+                  <i class="icon far fa-times-circle times"></i>
+                  <i class="icon far fa-check-circle check"></i>
+                  Chỉ được điền chữ cái
+                </span>
+                <span class="error">
+                  <i class="fas fa-exclamation-circle"></i>
+                  Không được để trống
+                </span>
+              </div>
+              
+              <div class="form__item">
+                <label for="lastname">Họ và tên đệm</label>
+                <input type="text" class="input" name="lastname" placeholder="Nguyễn Văn">
+                <span class="rule lastname-rule">
+                  <i class="icon far fa-times-circle times"></i>
+                  <i class="icon far fa-check-circle check"></i>
+                  Chỉ được điền chữ cái
+                </span>
+                <span class="error">
+                  <i class="fas fa-exclamation-circle"></i>
+                  Không được để trống
+                </span>
+              </div>
+              
+              <div class="form__item">
+                <label for="email">Email</label>
+                <input type="text" class="input" name="email" placeholder="nguyenvanA123@gmail.com">
+                <span class="rule email-rule">
+                  <i class="icon far fa-times-circle times"></i>
+                  <i class="icon far fa-check-circle check"></i>
+                  Email hợp lệ
+                </span>
+                <span class="error">
+                  <i class="fas fa-exclamation-circle"></i>
+                  Không được để trống 
+                </span>
+              </div>
+              
+              <div class="form__item">
+                <label for="password">Mật khẩu</label>
+                <input type="password" class="input" name="password" placeholder="Mật khẩu">
+                <i class="far fa-eye" onClick="makePasswordVisible(event)"></i>
+                <span class="rule capital-rule">
+                  <i class="icon far fa-times-circle times"></i>
+                  <i class="icon far fa-check-circle check"></i>
+                  Chữ cái in hoa
+                </span>
+                <span class="rule special-rule">
+                  <i class="icon far fa-times-circle times"></i>
+                  <i class="icon far fa-check-circle check"></i>
+                  Ký tự đặc biệt
+                </span>
+                <span class="rule numbers-rule">
+                  <i class="icon far fa-times-circle times"></i>
+                  <i class="icon far fa-check-circle check"></i>
+                  Có chứa số
+                </span>
+                <span class="rule char-rule">
+                  <i class="icon far fa-times-circle times"></i>
+                  <i class="icon far fa-check-circle check"></i>
+                  8+ ký tự
+                </span>
+                <span class="error">
+                  <i class="fas fa-exclamation-circle"></i>
+                  Không được để trống 
+                </span>
+              </div>
+              
+              <div class="form__item">
+                <label for="password-check">Nhập lại mật khẩu</label>
+                <input type="password" class="input" name="password-check" placeholder="Mật khẩu">
+                <i class="far fa-eye" onClick="makePasswordVisible(event)"></i>
+                <span class="rule password-check-rule">
+                    <i class="icon far fa-times-circle times"></i>
+                    <i class="icon far fa-check-circle check"></i>
+                    Mật khẩu nhập đúng
+                </span>
+                <span class="error">
+                  <i class="fas fa-exclamation-circle"></i>
+                  Không được để trống 
+                </span>
+              </div>
+          
+              <input class="submit" type="submit" value="Đăng ký">
+            </form>
+          </main>
+          
+          <aside class="modal hide" id="modal"></aside>
+          <!-- link js -->
+            <script  src="./script.js"></script>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

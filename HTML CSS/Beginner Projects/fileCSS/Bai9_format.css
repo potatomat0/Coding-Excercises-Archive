@@ -1,0 +1,145 @@
+/*Định dạng body*/
+body{
+    width: 1000px;
+    margin: 0px auto;
+    border: solid 1px grey;
+}
+*{
+    box-sizing: border-box;}
+/*Định dạng header */
+header {
+    height: 150px;
+    background: url(../Images/bookstore/banner960x198.jpg);
+    background-size: 100% 100%;
+}
+/* định dạng navigation */
+.menu{
+    background: rgb(71, 70, 70);
+    text-align:center
+}
+.menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu ul a,.menu li{
+    color: rgb(227, 244, 245);
+    text-decoration: none;
+    display:inline-block;
+    line-height: 40px;
+    width:100px;
+    text-align: center;
+
+}
+.menu ul a:hover{
+    color: rgb(3, 116, 116);
+    background: crimson;
+    font-size: larger;
+    font-weight: bold;
+}
+
+/* định dạng phần nội dung */
+main{
+    display: flex;
+}
+    /*Cột trái */
+aside {
+    width:30%;
+    background:white;
+}
+aside ul li a{
+    list-style: circle;
+    text-decoration: none;
+    text-align: left;
+}
+    /*cột phải */
+article {
+    width:70%;
+    background:white;
+}
+
+article h2 {
+    color: deepskyblue;
+}
+.khungsach{
+    border: solid brown;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.khungsach h4{
+    color: brown;
+}
+.khungsach .tacgia{
+    text-align: right;
+}
+.tacgia span {
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+}
+
+/*định dạng footer */
+footer {
+    height:100px;
+    background: crimson;
+}
+/*Định dạng class*/
+.tieude{
+    background: crimson;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    margin: 0px;
+    border-radius: 10px;
+}
+.border{
+    border: solid crimson;
+    border-radius: 10px;
+    margin: 5px;
+}
+.border ul li a {
+    line-height: 20px;
+    color: deeppink;
+}
+.border2{
+    border: solid crimson 3px;
+    margin: 5px;
+    padding: 5px;
+}
+div div {
+    text-align: left;
+}
+/* Định dạng phần login */
+button {   
+    background-color: rgb(187, 20, 220);     
+     color: white;   
+     padding: 15px;   
+     margin: 5px;   
+     border: none;   
+     cursor: pointer; 
+     border-radius: 5px;  
+      }   
+form {   
+     border: 3px solid #f1f1f1;  
+ }   
+input[type=text], input[type=password] {   
+     width: 80%;   
+     margin: 8px 0;  
+     padding: 12px 20px;   
+     display: inline-block;   
+     border: 2px solid crimson;   
+     box-sizing: border-box;  
+ }  
+button:hover {   
+     opacity: 0.7;   
+ }     
+.container {   
+     padding: 25px;   
+     background-color: rgb(255, 255, 255); 
+     align-items: center; 
+ } 
+ .cuoibai{
+     text-align: center;
+     padding-top: 20px;
+ }

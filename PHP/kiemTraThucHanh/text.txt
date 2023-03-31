@@ -1,0 +1,15 @@
+213	21	12	252	./images/HINH_3.jpg
+123	213	213	45369	./images/cuoi_2.jpg
+12	23	213	4899	./images/HINH_3.jpg
+12	213	123	26199	./images/milos.jpg
+21	231	23	5313	./images/HINH_3.jpg
+12	132	12	1584	./images/HINH_3.jpg
+123	123	123	15129	./images/HINH_3.jpg
+123	213	123	26199	./images/HINH_3.jpg
+123	1231	213	262203	./images/cuoi_8.jpg
+123	2312	213	492456	./images/canh_ga_nuong_toi.jpg
+			0	./images/HINH_3.jpg
+2312	1	2131	2131	./images/HINH_3.jpg
+12312	21312	12312	262393344	./images/HINH_3.jpg
+1231	1231	123	151413	./images/HINH_3.jpg
+3123	1312	123	161376	./images/ca_nuong_trui.jpg

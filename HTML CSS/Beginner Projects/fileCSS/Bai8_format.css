@@ -1,0 +1,148 @@
+/*Định dạng body*/
+body{
+    width: 1000px;
+    margin: 0px auto;
+    border: solid 1px grey;
+    text-align: center;
+}
+*{
+    box-sizing: border-box;
+}
+/*Định dạng header*/
+header {
+    height: 150px;
+    background: url(../Images/banner2.png);
+    background-size: 100% 100%;
+}
+/*Định dạng danh navigation*/
+nav {
+    height: 40px;
+    background: url(../Images/menu_bg.png);
+    
+}
+.menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu ul a,.menu li{
+    color: rgb(227, 244, 245);
+    text-decoration: none;
+    display:inline-block;
+    line-height: 40px;
+    width:100px;
+    text-align: Center;
+}
+.menu ul a:hover{
+    color: rgb(3, 116, 116);
+    background: aquamarine;
+    font-size: larger;
+    font-weight: bold;
+    animation: doimau 6s infinite;
+}
+ /* animation */
+ @keyframes doimau{
+     0% {background-color: pink;}
+     25% {background-color: teal;}
+     50% {background-color: cyan;}
+     75% {background-color: pink;}
+     100% {background-color: burlywood;}
+ }
+   
+/*Định dạng sản phẩm và danh mục*/
+main{
+    display: flex;
+}
+    /*Định dạng danh mục sản phẩm*/
+ aside{
+    width: 25%;
+    padding: 5px;
+    
+}
+aside ul {
+    list-style: square;
+}
+aside ul ul {
+    list-style: circle;
+}
+aside a {
+    text-decoration: none;
+    color:blueviolet;
+    line-height: 25px;
+    font-weight: bold;
+    transition: all 1s;
+}
+aside ul ul a{
+    font-weight: normal;
+}
+aside a:hover{
+    text-shadow: 0 0 3px blue, 0 0 2px red;
+    font-size: 20px;
+    color: red;
+}
+    /*Định dạng sản phẩm*/
+article{
+    width: 75%;
+    
+    background: rgb(124, 128, 128);
+}
+.container{
+    display: flex;
+
+}
+.sanpham{
+    background: white;
+    text-align: center;
+    margin: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.sanpham a img{
+    transition: all 1s;
+}
+.sanpham a img:hover{
+    transform: scale(1.5);
+}
+.sanpham a{
+    text-decoration: none;
+    color: royalblue;
+}
+.sanpham h4{
+    color: red;
+}
+.tieude{
+    background: rgb(17, 172, 172);
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    margin: 0px;
+}
+/*Định dạng footer*/
+footer{
+    background: rgb(247, 244, 240);
+    border: solid 1px grey;
+}
+.container .thongtin{
+    flex-grow: 1;
+    padding: 10px;
+}
+/* responsive web */
+ @media screen and (max-width: 500px) {
+     body,header, menu, aside, article, .sanpham{
+         width: 100%;
+         
+     }
+     header{
+         height: 100px;
+     }
+     .menu{
+         height: auto;
+     }
+     .menu ul a, .menu ul li{
+         width: 100%;
+     }
+    main, .container{
+        flex-wrap: wrap;
+    } 
+     
+ }

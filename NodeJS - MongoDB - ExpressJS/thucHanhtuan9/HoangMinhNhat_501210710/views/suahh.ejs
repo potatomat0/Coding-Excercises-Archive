@@ -1,0 +1,14 @@
+<% include header.ejs %>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <form action="/sua" method="post">
+                        <input type="hidden" name="txtId" value="<%= hh._id %>">
+                        Tên hàng hóa đã có: <input required class="form-control" type="text" name="txtTen" value="<%= hh.name %>"> <br>
+                        Nhập giá mới cho hàng hóa: <input required min="0" class="form-control" type="number" value="<%= hh.price %>" name="txtGia"> <br>
+                        <button class="btn btn-primary" type="submit">Sửa</button>
+                        
+                        <br> <hr>
+                        <a href="/"> Quay về trang chủ </a>
+                    </form>
+                </div>
+<% include footer.ejs %>

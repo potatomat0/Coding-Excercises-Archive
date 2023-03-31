@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2.2</title>
+    <style>
+        table {
+            width: 300px;
+        }
+
+        td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Đăng ký</h1>
+
+    <form id="nhap">
+        <input placeholder="Firs Name" type="text" name="fn" id="fn"> <br> <br>
+        <input placeholder="Last Name" type="text" name="ln" id="ln"> <br> <br>
+        <input placeholder="Email" type="text" name="e" id="e"> <br> <br>
+    </form>
+
+
+    <button onclick="them()">Register</button>
+    <button onclick="xem()">View</button>
+    <button onclick="reset()">reset</button> <br> <br>
+
+    <table id="kq">
+        <tr>
+            <td>Firs Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+        </tr>
+    </table>
+
+    <script>
+        //tạo mảng chứa person
+        var ps = [];
+
+        var nhap = document.getElementById('nhap');
+        var kq = document.getElementById('kq');
+
+        //tạo class 
+        class person {
+            constructor(f_n, l_n, e_e) {
+                this.firstname = f_n;
+                this.lastname = l_n;
+                this.email = e_e;
+            }
+        }//end class person
+        
+        //hàm thêm 
+        function them() {
+            var p = new person(nhap.fn.value,nhap.ln.value,nhap.e.value);
+
+            //thêm dữ liệu vào cuối mảng
+            ps.push(p);
+
+            //kiểm tra console
+            console.log(ps);
+            alert(ps.length);
+        }//end hàm thêm
+
+        //hàm xem
+        function xem() {
+            for (let p of ps) {
+                let row = kq.insertRow();
+
+                let cell0 = row.insertCell(0);
+                cell0.innerHTML = p.firstname;
+
+                let cell1 = row.insertCell(1);
+                cell1.innerHTML = p.lastname;
+
+                let cell2 = row.insertCell(2);
+                cell2.innerHTML = p.email;
+            }
+        }//end hàm xem
+
+        //hàm reset
+        function reset() {
+            for (let i = kq.rows.length - 1; i > 0; i--) {
+                kq.deleteRow(i);
+            }
+        }//end hàm reset
+
+
+    </script>
+</body>
+
+</html>

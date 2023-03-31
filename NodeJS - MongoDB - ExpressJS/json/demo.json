@@ -1,0 +1,9 @@
+{
+    "sinhvien":{
+        "masv": "501210710",
+        "tensv": "Nhat",
+        "MaSoXe": null,
+        "monhoc": ["Node.JS", "angularjs","CMS","PHP1"],
+        "DatHocBong": false 
+    }
+}

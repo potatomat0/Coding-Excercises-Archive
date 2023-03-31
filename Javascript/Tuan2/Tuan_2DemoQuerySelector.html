@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="">
+        <p>Hãy chọn đồ ăn bạn muốn</p>
+        <input type="radio" id="BigMac" name="DoAn" value="BigMac">
+        <label for="BigMac">BigMac</label><br>
+        <input type="radio" id="Pizza" name="DoAn" value="Pizza">
+        <label for="Pizza">Pizza</label><br>
+        <input type="radio" id="Pho" name="DoAn" value="Pho">
+        <label for="Pho">Phở</label>
+      
+        <br>  
+      
+        <p>Hãy chọn đồ uống bạn muốn:</p>
+        <input type="radio" id="coca" name="DoUong" value="1">
+        <label for="coca">coca</label><br>
+        <input type="radio" id="strongbow" name="DoUong" value="2">
+        <label for="strongbow">Strongbow</label><br>  
+        <input type="radio" id="BiaTiger" name="DoUong" value="3">
+        <label for="BiaTiger">Bia Tiger</label><br><br>
+        <input type="submit" value="Submit" onclick="hienthi();">
+
+      </form>
+    <script>
+
+        var doAnDuocChon = document.querySelector('input[name="DoAn"]:checked').value;
+        var doUongDuocChon = document.querySelector('input[name="DoUong"]:checked').value;
+
+
+        
+        function hienthi() {
+            document.write("<p>"+"bạn đã chọn những món sau:" +"</p>")
+            document.write(doAnDuocChon.value + "<br>");
+            document.write(doUongDuocChon.value);
+        }
+
+    </script>
+</body>
+</html>

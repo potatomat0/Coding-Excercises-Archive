@@ -1,0 +1,11 @@
+----
+friendly reminder: startbootstrap.com là nơi để lấy giao diện bootstrap miễn phí
+---
+thay thế file của folder asset (từ folder theme tải về) vào images (trong mục public của khung express)
+                                                                    js vào javascript
+                                                                    css vào styles
+---
+chỉnh trên file index.js ở mục routes cần phải npm start lại
+chỉnh trên file của mục views thì server sẽ cập nhật live
+---
+sử dụng <% include tenfile.ejs %> để liên kết header footer và những phần nội dung cần lặp lại vào file 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var bai3 = [
+    {name: 'hoang minh nhat', dateOfbirth: 2003, salary: 300000},
+    {name: 'nguyen van a', dateOfbirth: 2001, salary: 400000},
+    {name: 'john doe', dateOfbirth: 1997, salary: 500000},
+] 
+
+//đề: làm tròn một số, với số làm tròn được chỉ định
+
+var round = (num, dec) => {
+    return +(Math.round(num + `e+${dec}`)  + `e-${dec}`);
+}
+
+console.log(
+round(1.005,2))
+
+console.log(round(1.05, 2) )
+
+console.log(round(1.00005,2))
+
+console.log(round(1.00005,4))
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    </script>
+</body>
+</html>

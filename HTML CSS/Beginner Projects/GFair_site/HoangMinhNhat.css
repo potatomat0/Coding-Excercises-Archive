@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Định dạng header */
+.headercontent, .articlecontent, .sectioncontent, .footercontent, .textcr, .credit{
+    width:1000px;
+    height:inherit;
+    margin: 0 auto;
+    display: flex;
+}
+    /*ĐỊNH DẠNG CREDIT PHÍA TRÊN CÙNG */
+.credit{
+    height: 40px;
+    border-bottom: solid grey 3px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+    /* định dạng logo và navigation */
+header{
+    height: 100px;
+}
+.logo {
+    width: 30%;
+    text-align: right;
+    
+}
+.logo h1{
+    margin-bottom: 0;
+}
+.nav{
+    width:70%;
+    height: inherit;
+    text-align: right;
+}
+.menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu ul a,.menu li{
+    color: black;
+    text-decoration: none;
+    display:inline-block;
+    line-height: 40px;
+    width:120px;
+    text-align: Center;
+}
+.menu ul a:hover{
+    color: GREEN;
+    font-size: larger;
+    font-weight: bold;
+    BORDER-BOTTOM: SOLID 5PX GREEN;
+}
+
+/*định dạng phần banner */
+main {
+    height: auto;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin: 0px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.textgiua {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+button{
+    background: green;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 100px;
+}
+
+/* VÙNG WELCOME TO GREEN FAIR */
+.articlecontent{
+    justify-content: space-between;
+    align-items: center;
+}
+article{
+    height: 300px;
+    background: white;
+}
+.sanpham{
+    width: 30%;
+    background: WHITE;
+    color: BLACK;
+    text-align: CENTER;
+}
+.sanpham h3, .sanpham p{
+    margin: 10px;
+}
+.sanpham h3{
+    color: cyan;
+    width: 25%;
+}
+
+/* vùng section: get in touch */
+.sectioncontent {
+    background: rgb(228, 217, 217);
+    height: 500px;
+}
+
+/* Định dạng footer */
+.copyright{
+    height: 40px;
+    background: black;
+}
+.textcr{
+    justify-content: space-between;
+    color: white;
+}

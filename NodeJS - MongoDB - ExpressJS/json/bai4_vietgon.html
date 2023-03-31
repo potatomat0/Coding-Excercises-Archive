@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body leftmargin="0" topmargin="0">
+    <!-- link đến file json -->
+    <script src="bai4.js"></script>
+    <script>
+        // document.write(`<table border="1" cellspacing="0"> <tr> <th>Họ tên </th> <th>tuổi</th> </th> <th>Email</th>  </tr>`)
+
+        //     for (sv of danhsach) {
+        //         document.write(`<tr> 
+        //                             <td> ${sv.tensv} </td>
+        //                             <td> ${sv.tuoi} </td> 
+        //                             <td> ${sv.lop} </td> 
+        //                         </tr>`);
+        //     }
+        // document.write(`</table>`);       
+
+            //  cách viết gọn
+             document.write(`<table border="1" cellspacing="3"> 
+                            <tr> 
+                                <th>Họ tên</th> 
+                                <th>tuổi</th> 
+                                <th>Lớp</th>
+                            </tr>
+                        ${danhsach.map( (sv) =>{
+                            return `<tr> 
+                                        <td> ${sv.tensv} </td>
+                                        <td> ${sv.tuoi} </td> 
+                                        <td> ${sv.lop} </td> 
+                                    </tr>` }).join('')}
+                                    </table>`)
+                    
+
+        
+    </script>
+
+
+    
+</body>
+</html>

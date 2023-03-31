@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .bannertext {
+            text-shadow: 0 6px 12px dodgerblue;
+        }
+        .nav-item{
+            margin-right: 20px;
+            margin-left:10px;
+        }
+        .card {
+          margin: 20px 5px 5px 5px;
+          box-shadow: 5px 5px 10px grey;
+        }
+        * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        .checked {
+        color: orange;
+        }
+        /* */
+        .rating {
+          width: 180px;
+        }
+
+        .rating__star {
+          cursor: pointer;
+          color: #dabd18b2;
+        }
+    </style>
+</head>
+<body  style="background:rgb(255, 255, 255)">
+    <!---header-->
+    <div class="container">
+        <header class="row">
+            <div class="col-lg-6 col-md-6 p-5 mt-3">
+                <h2 class=" text-light bannertext ">ONLINE SHOPPING MALL</h2>
+                <div class="border-top border-3 border-dark w-75">
+                  <h6>THE CENTER OF THE PROFESSIONAL PROGRAMMING</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="../resources/tainguyenlabs/hinhanh_labs/images/header-object.png" height="100%" alt="">
+            </div>
+        </header>
+
+        <!--nav-->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fa fa-home" href="#">  TRANG CHỦ</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link fa fa-info" href="#"> INFO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fa fa-phone" href="#"> CONTACT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fa fa-mail-reply" href="#"> SUBMIT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fa fa-question" href="#"> Q&A</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-dark dropdown-toggle fa fa-user" data-bs-toggle="dropdown"> Account
+                        </button>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Đăng Nhập</a>
+                        <a class="dropdown-item" href="#">Quên Mật Khẩu</a>
+                        <a class="dropdown-item" href="#">Đăng Ký thành viên</a>
+
+                        <a class="dropdown-item border-top border-2 border-muted mt-3" href="#">Đăng xuất</a>
+                        <a class="dropdown-item" href="#">Mật khẩu mới</a>
+                        <a class="dropdown-item" href="#">Cập nhật thông tin</a>
+
+                        <a class="dropdown-item border-top border-2 border-muted mt-3" href="#">Đơn hàng</a>
+                        <a class="dropdown-item" href="#">Hàng đã mua</a>
+
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light">English</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-light">Tiếng Việt</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    
+          <!--Body: sử dụng card-->
+          <div class="row mt-3">
+            <!---Cột trái-->
+            <div class="col-lg-9 col-md-8 col-sm-7">
+                
+              <!--row con-->
+              <div class="row">
+                <!--cột trái-->
+                <div class="col-6">
+                    <div class="container">
+                      <span onclick="this.parentElement.style.display='block'" class="closebtn">&times;</span>
+                      <img id="hinhto" style="width:100%" src="../resources/tainguyenlabs/hinhanh_labs/images/app1.jpg";>
+                      <div id="imgtext" class="text-center m-2 text-secondary fst-italic">Apple 1</div>
+                    </div>
+                    <!--hình con-->
+                    <div class="row">
+                        <div class="col-2"><img src="../resources/tainguyenlabs/hinhanh_labs/images/app1.jpg" alt="Apple 1" style="width:100%" onclick="chonHinh(this);"></div>
+                        <div class="col-2"><img src="../resources/tainguyenlabs/hinhanh_labs/images/app2.jpg" alt="Apple 2" style="width:100%" onclick="chonHinh(this);"></div>
+                        <div class="col-2"><img src="../resources/tainguyenlabs/hinhanh_labs/images/app3.jpg" alt="Apple 3" style="width:100%" onclick="chonHinh(this);"></div>
+                        <div class="col-2"><img src="../resources/tainguyenlabs/hinhanh_labs/images/app4.jpg" alt="Apple 4" style="width:100%" onclick="chonHinh(this);"></div>
+                        <div class="col-2"><img src="../resources/tainguyenlabs/hinhanh_labs/images/app5.jpg" alt="Apple 5" style="width:100%" onclick="chonHinh(this);"></div>
+                        <!-- <div class="col-2"><img src="../resources/tainguyenlabs/hinhanh_labs/images/app1.jpg" alt="Apple 6" style="width:100%" onclick="chonHinh(this);"></div> -->
+                        
+                    </div> <!--end hình con-->
+                </div> <!--end cột trái-->
+                
+                <!--cột phải-->
+                <div class="col-6">
+                    <h2>Laptop Macbook Air 2021 Ripro 1TB ROM 16GB RAM M1</h2>  
+                    <!--đánh giá sao-->
+                    <div id="stars">
+                      <span class="fa fa-star" onclick="DANHGIA(1)"></span>
+                      <span class="fa fa-star" onclick="DANHGIA(2)"></span>
+                      <span class="fa fa-star" onclick="DANHGIA(3)"></span>
+                      <span class="fa fa-star" onclick="DANHGIA(4)"></span>
+                      <span class="fa fa-star" onclick="DANHGIA(5)"></span>
+                      </div>
+                </div>
+                    <!--end đánh giá sao-->
+                    
+                    <!--text-->
+                    <h6>Macbook siêu mỏng nhẹ</h6>
+                    <p style="text-align:justify">
+                        I dont know-maybe the world has two different kinds of people, and for one kind the world is
+                            this completely logical, rice pudding place, and for the other its all hit-or miss macaroni gratin. I bet if 
+                            those tree frog parents of mine put rice pudding mix in the microwave and got macaroni gratin when the bell rang
+                    </p>
+                    <!--end text-->
+                    
+                    <h4 class="text-danger">GIÁ BÁN:  19.490.000đ</h4>
+
+                    <!--progress bar-->
+                    <div class="progress mt-4 mb-4">
+                        <div class="progress-bar" style="width: 80%;">80% khách hàng hài lòng với sản phẩm này</div>
+                    </div>
+                    <!--end progress bar-->
+
+                    <!--màu-->
+                    <span>
+                        <h5 style="display: inline-block;">MÀU:</h5>
+                        <div class=" rounded-circle text-black" style="width: 30px; height: 30px; display: inline-block; background: pink"><a href=""></a></div>
+                        <div class=" rounded-circle text-black" style="width: 30px; height: 30px; display: inline-block; background: grey"><a href=""></a></div>
+                    </span>
+                    
+                    <!--end màu-->
+                    
+                    <!--mua ngay-->
+                    <div style="display: block" class="mt-1 mb-3s">
+                        <div class="btn btn-secondary me-1">MUA NGAY</div>
+                        <div class="btn btn-warning"><span class="fa fa-heart text-light"></span></div>
+                    </div>
+
+                </div> <!--end cột phải con-->
+
+
+              </div> <!--end row con-->
+              
+              <!--tab cấu hình-->
+                    <!--Tạo dynamic tab lồng table-->
+            
+
+                   
+            </div> <!--end cột tráii-->
+
+            <!--Cột phải-->
+            <div class="col-lg-3 col-md-4 col-sm-5" style="background-color: beige;" >
+                <!--cards:-->
+                <div class="card text-center">
+                    <img src="../resources/tainguyenlabs/hinhanh_labs/images/shoppingcart.gif" class="card-img-right card-img-overlay w-25" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title">7 Items</h6>
+                      <p class="card-text">$120</p>
+                      <a href="#" class="btn btn-primary">View cart</a>
+                    </div>
+                  </div> <!--end card 1-->
+
+                <div class="card text-center p-2">
+                    <div class="card-body">
+                        <input class="form-control" type="text" placeholder="KEYWORDS" aria-label="default input">
+                        <button class="btn btn-primary w-50 mt-3">Search</button>
+                    </div>    
+                  </div> <!--end card 2-->
+
+                <div class="list-group pb-5 mt-4">
+                    <a href="#" class="list-group-item list-group-item-action text-center fa fa-list">  Chủng loại</a>
+                                      
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Điện thoại di động</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Máy tính sách tay</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-success">Máy tính để bàn</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Quạt Máy</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Vi tính</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info">Tủ lạnh</a>
+                </div> <!--end card 3-->
+
+            </div> <!--end cột phải-->
+          </div> <!--end body-->
+
+          <!--footer-->
+          <footer class="bg-dark">
+            <div class="container">
+                        <!--Row 1-->  
+            <div class="row p-5">
+                <div class="col-lg-6 mt-2 text-sm-center text-lg-start">
+                    <p class="text-light">THÔNG TIN</p>
+                    <p class="text-muted" style="text-align: justify;">"I dont know-maybe the world has two different kinds of people, and for one kind the world is
+                         this completely logical, rice pudding place, and for the other its all hit-or miss macaroni gratin. I bet if 
+                         those tree frog parents of mine put rice pudding mix in the microwave and got macaroni gratin when the bell rang, 
+                         theyd just tell themselves, “Oh, we must have put in macaroni gratin mix by mistake,” or theydd take out the macaroni.” And if I tried"</p>
+                </div>
+
+                <div class="col-lg-3 mt-2 text-sm-center text-lg-start p-0">
+                  <p class="text-light">SẢN PHẨM</p>
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#">Laptop</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#">Điện thoại</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#">PC</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#">Tablet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#">Linh kiện</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#">Đồng hồ</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-3 mt-2 text-sm-center text-lg-start">
+                    <p class="text-light">THÔNG TIN NHANH:</p>
+                    <p class="text-muted">Gọi mua hàng: 42069 7749</p>
+                    <p class="text-muted">Gọi Tư vấn: 0338214140</p>
+                    <p class="text-muted">Gọi bảo hành: 19009993</p>
+                    <p class="text-muted">Kỹ Thuật: 1123581321</p>
+                </div>
+            </div> <!--end row 1-->
+
+
+            <!--row 2:-->
+            <div class="row p-5 pb-0">
+                <hr class="bg-secondary"> 
+                <div class="mt-2 me-auto col-lg-9">
+                    <p class="text-muted text-lg-start text-sm-center">Copyright&copy; all rights reversed by Nhat Hoang </p>
+                </div>
+                <div class="mt-2 col-lg-3 text-sm-center text-lg-start">
+                  <i class="fa-brands fa-facebook fa-2x me-2 text-secondary"></i>
+                  <i class="fa-brands fa-twitter fa-2x me-2 text-secondary"></i>
+                  <i class="fa-brands fa-linkedin fa-2x me-2 text-secondary"></i>
+                  <i class="fa-brands fa-google fa-2x me-2 text-secondary"></i>
+                </div>
+            </div>
+            </div> <!--end container con-->
+          </footer> <!--end footer-->
+    </div> <!--end container-->
+
+    <!--script lab 3 javascript-->
+    <script>
+       //khai báo biến:
+        var hinhto = document.getElementById("hinhto");
+        var imgText = document.getElementById("imgtext");
+        var hinhtruocdo=null;
+      //thumbnail images
+      function chonHinh(hinhnho) {
+        
+        hinhto.src = hinhnho.src;
+        imgText.innerHTML = hinhnho.alt;
+        // tạo biến của hình trước đó
+        if (hinhtruocdo!=null)
+        {hinhtruocdo.style.filter = "blur(0px)";}
+        hinhtruocdo=hinhnho;
+        hinhnho.style.filter = "blur(3px)"; //hiệu ứng làm mờ khi nhấn vào hình
+
+      }
+      //hàm đánh giá sao
+      var stars = document.getElementById('stars');
+      function DANHGIA(sosao){
+      for(let i=0;i<sosao;i++)
+      stars.children[i].style.color = "yellow";
+      for(i=sosao;i<5;i++)  
+      stars.children[i].style.color = "black";
+      }
+
+
+      // stars = getElementById('stars');
+
+      // function DANHGIA(sosao) {
+      //   for(i=0;i<sosao;i++)
+      //     stars.children[i].style.color = 'orangered';
+      //   for(i=0;i<5;i++)
+      //     stars.children[i].style.color = 'black';
+      // }
+
+      //đánh giá sao
+      // const ratingStars = [...document.getElementsByClassName("rating__star")];
+
+      // function executeRating(stars) {
+      //   const starClassActive = "rating__star fas fa-star";
+      //   const starClassInactive = "rating__star far fa-star";
+      //   const starsLength = stars.length;
+      //   let i;
+      //   stars.map((star) => {
+      //     star.onclick = () => {
+      //       i = stars.indexOf(star);
+
+      //       if (star.className===starClassInactive) {
+      //         for (i; i >= 0; --i) stars[i].className = starClassActive;
+      //       } else {
+      //         for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+      //       }
+      //     };
+      //   });
+      // }
+      // executeRating(ratingStars);
+      
+      </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+tạo app
+bước một: tạo folder
+bước hai: mở cmd gõ express -e để tạo bộ khung và package.json
+bước ba: gõ npm install trên cmd để cài các modules có ở phần dependency
+bước bốn: npm start để chạy app
+
+
+---
+khi chạy package.json mặc định (chưa sửa) nó sẽ chạy ở port 3000
+nếu bị đụng port: vào bin/www, dòng thứ 15 để chỉnh port

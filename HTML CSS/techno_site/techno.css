@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+a{
+    text-decoration:none;
+}
+/* vung header */
+header{
+    height: 100px;
+}
+.headercontent, .articlecontent, .sectioncontent, .footercontent, .textcr{
+    width:1000px;
+    height:inherit;
+    margin: 0 auto;
+    display: flex;
+}
+.logo {
+    width: 30%;
+    text-align: right;
+    font-style: italic;
+}
+.logo h1{
+    margin-bottom: 0;
+}
+.nav{
+    width:70%;
+    height: inherit;
+    text-align: right;
+}
+.menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu ul a,.menu li{
+    color: Coral;
+    text-decoration: none;
+    display:inline-block;
+    line-height: 40px;
+    width:100px;
+    text-align: Center;
+}
+.menu ul a:hover{
+    color: Brown;
+    font-size: larger;
+    font-weight: bold;
+}
+.nav input{
+    background:black;
+    color: white;
+    padding:5px;
+    border-radius: 20px;
+}
+/* vung article */
+.articlecontent{
+    justify-content: space-between;
+    align-items: center;
+}
+article{
+    height: 500px;
+    background: teal;
+}
+.sanpham{
+    width: 30%;
+    background: black;
+    color: aliceblue;
+}
+.sanpham h3, .sanpham p{
+    margin: 10px;
+}
+.sanpham h3{
+    color: cyan;
+    width: 25%;
+}
+/* vung section */
+.item{
+    width: 22%;
+}
+.item img{
+    float: left;
+    margin-right: 10px;
+}
+.item p{
+    text-align: justify;
+}
+.sectioncontent{
+    justify-content: space-between;
+}
+/* vung footer */
+footer{
+    height: 200px;
+    background: lightgrey;
+}
+.info {
+    text-align: justify;
+    color: grey;
+    width: 22%;
+}
+.footercontent{
+    justify-content: space-between;
+}
+
+/* vung copyright */
+.copyright{
+    height: 40px;
+    background: orangered;
+}
+.textcr{
+    justify-content: space-between;
+}

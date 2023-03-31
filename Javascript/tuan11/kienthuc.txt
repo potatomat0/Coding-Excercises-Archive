@@ -1,0 +1,1 @@
+map và object và typed array có 60% khả năng đưa ra trong đề thi

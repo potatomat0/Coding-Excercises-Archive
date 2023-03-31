@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anhto{
+            width: 0px;
+            height: 0px;
+            /* border: dashed teal 5px; */
+            overflow: hidden;
+            padding: 10px;
+            position: absolute;
+            left: 55px;
+            top: 0px;
+
+            transition: all 2s;
+        }
+        .phonganh{
+            width: 50px;
+            height: 70px;
+            background: cyan;
+            position: relative;
+            margin: 5px;
+        }
+        .phonganh:hover img{
+            transition: width 1s;
+        }
+        .phonganh:hover>img{
+            box-shadow: 0 0 5px red;
+        }
+        .phonganh:hover .anhto{
+            width: 200px;
+            height: auto;
+            padding: 10px;
+            border: dashed 5px teal;
+            background: olivedrab;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="phonganh">
+        <img src="../Images/EiffelTower.jpg" width="50" alt="">
+        <div class="anhto">
+            <img src="../Images/EiffelTower.jpg" width="100%" alt="">
+            <P>akwoajd aoiw awda ă awdaw awda awda awd awdawd awda awdsd ăd</P>
+        </div>
+    </div>
+</body>
+</html>
