@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi</title>
+</head>
+<body>
+    <h1 style="color: powderblue">
+        😮‍💨😮‍💨😮‍💨
+
+        <button 
+        onclick="new Notification('Notification', {
+          body: 'This is a notification message.'
+        }).show();"
+      >
+        Click Me
+      </button>
+    </h1>
+    <script>
+        // tạo error dialog từ renderer
+        // cài electron/remote từ npm: npm i @electron/remote
+        // https://www.npmjs.com/package/@electron/remote
+        // const electron = require('@electron/remote');
+        // electron.dialog.showErrorBox('error', 'error from renderer')
+        let electron = require('electron');
+
+        electron.ipcRenderer.on('OK', _=> {
+            const electron0 = require('@electron/remote');
+            electron0.dialog.showErrorBox('error','this is a message from the renderer, anyways you really want to die huh?')
+        })
+
+
+        </script>
+</body>
+</html>

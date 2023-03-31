@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <style>
+                    img{
+                              width: 150px;
+                    }
+                    table tr td{
+                              width: 200px;
+                              height: 100px;
+                    }
+                    table{
+                              width: 1400px
+                              ;
+                    }
+          </style>
+</head>
+<body>
+          <div id="app">
+                    <div id="show">
+                           <table border="1">
+                              <tr>
+                                        <th>Hình ảnh</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Mã sản phẩm</th>
+                                        <th>Có sẵn</th>
+                                        <th>Giá</th>
+                                        <th>Mô tả sản phẩm</th>
+                                        <th>Đánh giá</th>
+                              </tr>
+                              <tr v-for = "x in productList">
+                                        <td><img :src="x.img"></td>
+                                        <td>{{x.name}}</td>
+                                        <td>{{x.code}}</td>
+                                        <td>{{x.available}}</td>
+                                        <td>{{x.price}}</td>
+                                        <td>{{x.product}}</td>
+                                        <td>{{x.rating}}</td>
+                              </tr>
+                           </table>
+                    </div>
+          </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="Bai2.js"></script>
+</html>

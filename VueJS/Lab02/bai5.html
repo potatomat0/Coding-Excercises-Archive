@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      .form-group {
+        margin-top: 30px;
+      }
+      .form-message {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <form class="w-25 m-auto border border-2 border-info p-2">
+        <div class="form-group">
+          <label class="fw-bold">Tên học sinh</label>
+          <input type="text" class="form-control" v-model="ten" />
+        </div>
+        <div class="form-group">
+          <label class="fw-bold">Ngày sinh</label>
+          <input type="date" class="form-control" v-model="ns" />
+        </div>
+        <div class="form-group">
+          <label class="fw-bold">Điểm</label>
+          <input type="number" class="form-control" v-model="diem" data-min="0" data-max="10" />
+        </div>
+        <span class="form-control text-danger fw-bold">{{ message }}</span>
+        <button @click.prevent="add()" class="btn btn-primary mt-2">
+          Thêm
+        </button>
+        <button
+          @click.prevent="saveEdit({id,ten,ns,diem})"
+          class="btn btn-primary mt-2 ms-1"
+        >
+          Sửa
+        </button>
+        <button
+          @click.prevent="deleteItem({id,ten,ns,diem})"
+          class="btn btn-primary mt-2 ms-1"
+        >
+          Xoa
+        </button>
+        <button
+          @click.prevent="cancel({id,ten,ns,diem})"
+          class="btn btn-primary mt-2 ms-1"
+        >
+          Huy
+        </button>
+        <button
+        @click.prevent="neww()"
+        class="btn btn-primary mt-2 ms-1"
+      >
+        Moi
+      </button>
+      </form>
+      <table class="table table-bordered w-50 m-auto">
+        <tr>
+          <th>Tên học sinh</th>
+          <th>Ngày sinh</th>
+          <th>Điểm</th>
+          <th>Xếp loại</th>
+          <th></th>
+        </tr>
+        <tr v-for="x in stds">
+          <td>{{ x.ten}}</td>
+          <td>{{ x.ns}}</td>
+          <td>{{ x.diem }}</td>
+          <td>{{x.loai}}</td>
+          <th><a href="###" @click="editTable(x)">Sửa</a></th>
+        </tr>
+      </table>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

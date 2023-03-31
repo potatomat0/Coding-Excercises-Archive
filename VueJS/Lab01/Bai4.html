@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+          <style>
+                    .item {
+                              display: flex;
+                              justify-content: space-between;
+                              background: pink;
+                              margin-top: 5px;
+                              padding: 2px;
+                              cursor: pointer;
+                              user-select: none;
+                    }
+
+                    .show {
+                              width: 220px;
+                              background-color: rgb(151, 241, 241);
+                              padding: 10px;
+                              margin: auto;
+                    }
+
+                    .item.chose {
+                              background: green;
+                    }
+          </style>
+</head>
+
+<body>
+          <div id="app">
+                    <div class="show">
+                              <div   v-for="x in orderList">
+                                        <div class="item" :class="{chose : x.isChosen}" @click="chose(x)">
+                                                  <p>{{x.name}}</p>
+                                                  <p>{{"$"+x.price}}</p>
+                                        </div>
+                              </div>
+                              <p>{{"Tổng tiền $"+sum}}</p>
+                    </div>
+          </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="bai4.js"></script>
+
+</html>

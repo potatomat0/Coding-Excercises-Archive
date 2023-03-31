@@ -1,0 +1,14 @@
+{
+  "name": "shoppinglist",
+  "version": "1.0.0",
+  "description": "kiem tra giua ky",
+  "main": "basicNoti.js",
+  "scripts": {
+    "start": "electron ."
+    },
+  "author": "Minh Nhat",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^22.0.0"
+  }
+}

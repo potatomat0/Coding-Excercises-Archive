@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello World!</title>
+	<meta http-equiv="Content-Security-Policy"
+		content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body>
+	<h1>Hello World!</h1> We are using node
+    <br><br>
+    <strong>
+    Trigger Custom Notifications in Electron
+    </strong>
+    <button id="trigger">
+    Trigger Custom Notification
+    </button>
+	<script>
+		document.write(process.versions.node)
+	</script>, Chrome
+	<script>
+		document.write(process.versions.chrome)
+	</script>, and Electron
+	<script>
+		document.write(process.versions.electron)
+	</script>.
+
+	<script src="basicNoti.js"></script>
+</body>
+
+</html>

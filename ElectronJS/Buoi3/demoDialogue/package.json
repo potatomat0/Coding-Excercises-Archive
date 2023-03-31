@@ -1,0 +1,17 @@
+{
+    "name": "demodialogue",
+    "version": "1.0.0",
+    "description": "Hello World!",
+    "main": "main.js",
+    "author": "Nhat",
+    "license": "MIT",
+    "scripts": {
+        "start": "electron ."
+    },
+    "devDependencies": {
+        "electron": "^22.0.0"
+    },
+    "dependencies": {
+        "@electron/remote": "^2.0.9"
+    }
+}

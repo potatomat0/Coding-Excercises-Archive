@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi</title>
+</head>
+<body>
+    <h1 style="color: powderblue">
+        😮‍💨😮‍💨😮‍💨
+    </h1>
+    <button onclick="openWebsite()">Open a random website from main process</button>
+    <button onclick="openWebsite2()">Open a random website from render process</button>
+    <script>
+        let {ipcRenderer} = require('electron')
+        let data = null
+        ipcRenderer.on('dulieu', (e,diachi)=> {data = diachi})
+        const {BrowserWindow,app} = require('@electron/remote');
+
+        function openWebsite2() {
+            let win = new BrowserWindow({
+                width: 400, height: 400,
+                parent: require('@electron/remote').getCurrentWindow()
+            })
+            win.loadURL(data[Math.floor(Math.random()*3)])
+        }
+        // tạo error dialog từ renderer
+        // cài electron/remote từ npm: npm i @electron/remote
+        // https://www.npmjs.com/package/@electron/remote
+        // const electron = require('@electron/remote');
+        // electron.dialog.showErrorBox('error', 'error from renderer')
+        const openWebsite = _=>{
+            let electron = require('electron')
+            electron.ipcRenderer.send('openWebsite')
+        }
+
+        // cach 2
+        </script>
+</body>
+</html>

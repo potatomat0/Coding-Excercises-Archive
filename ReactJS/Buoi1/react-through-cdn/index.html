@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tạo reactApp bằng cdn</title>  
+</head>
+<body>
+    <!-- tạo một div chính -->
+    <div id="app"></div>
+        <!-- gắn cdn links -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        
+    <script>
+        // Cách 1
+        /* 
+        
+        ReactDOM.render(
+
+          React.createElemment('h1',null,'hello world! 😝😝'),
+          document.querySelector('#app')
+        
+        )
+        
+        */
+
+        //Cách 2:
+
+        /* 
+              const root = ReactDOM.createRoot(
+        document.getElementById('app')
+        );
+        root.render(<h1>Hello, world!</h1>);
+
+        function Home() {
+          const hi = <p> hello world </p>;
+          return (
+            <>
+              i just wrote my first react app! {hi}!
+            </>
+          )
+        }
+        */
+
+        function ourApp() {
+          return React.createElement('div',null,[
+            React.createElement('p', null,'Hello world!'),
+            React.createElement('h3', null,`Bây giờ là: ${new Date().toLocaleTimeString()} ⌚`),
+            React.createElement('h1', null,'alright'),
+            React.createElement('h2', null,'bye'),
+          ])
+        }
+        setInterval(()=> {
+          ReactDOM.render(
+            React.createElement(ourApp),
+            document.querySelector( '#app' )
+          )
+        },1000)
+        // const root = ReactDOM.createRoot(document.getElementById('app'));
+        // root.render(<h1>Hello, world!</h1>);
+    </script>
+</body>
+</html>

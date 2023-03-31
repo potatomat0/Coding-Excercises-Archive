@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        height: 30px;
+        background-color: green;
+      }
+      .layout {
+        width: 300px;
+        margin: auto;
+      }
+      button {
+        line-height: 25px;
+        float: right;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: auto;
+      }
+      .list{
+          display: block;
+      }
+      img{
+          width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="layout">
+        <div class="btn">
+          <button @click="grid">Grid</button>
+          <button @click="list">List</button>
+        </div>
+        <div class="show">
+         <div v-if ="classs" class="list">
+          <div v-for ="x in img"><img :src="x.img" alt=""> <span>{{x.name}}</span></div>
+         </div>
+          <div v-else class="grid">
+          <div  v-for ="x in img"><img :src="x.img" alt=""></div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="Bai3.js"></script>
+</html>
